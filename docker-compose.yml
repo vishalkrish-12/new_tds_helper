@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    environment:
+      - AIPIPE_TOKEN=${AIPIPE_TOKEN}
+    volumes:
+      - ./chroma_db:/app/chroma_db
+    ports:
+      - "8000:8000"
